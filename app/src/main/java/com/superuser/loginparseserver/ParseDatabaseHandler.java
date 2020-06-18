@@ -21,10 +21,10 @@ public class ParseDatabaseHandler extends Application {
         super.onCreate();
         //Creating a link to the database
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId(getString(R.string.app_id))
+                .applicationId(getString(R.string.aws_app_id))
                 // if defined
-                .clientKey(getString(R.string.client_key))
-                .server(getString(R.string.server_url))
+                .clientKey(getString(R.string.aws_client_key))
+                .server(getString(R.string.aws_server_url))
                 .build()
         );
         ParseInstallation.getCurrentInstallation().saveInBackground();
